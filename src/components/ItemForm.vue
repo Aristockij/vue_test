@@ -1,8 +1,8 @@
 <template>
     <form v-if="selectedItem" @submit.prevent="submitForm" class="form">
       <h2>Выбранный элемент:</h2>
-      <div>
-        {{selectedItem.name}}
+      <div style="margin-bottom: 10px; font-size: 18px">
+       <strong>name:</strong>  {{selectedItem.name}}
       </div>
       <div>
         <input class="input" type="text" v-model="tempVal">
@@ -54,7 +54,8 @@ export default {
   .btn{
     background: cornflowerblue;
     border: none;
-    height: 30px;
+    height: 40px;
+    font-size: 18px;
     padding: 5px 15px;
     margin-top: 15px;
     color: white;

@@ -1,10 +1,13 @@
 <template>
   <div class="app">
-    <h1>Список:</h1>
-    <items-list :info="info" @item-selected="handleItemSelected"/>
-    <val-popup  v-model:show="dialogVisible">
-      <item-form :selectedItem="selectedItem" @update:show-dialog="dialogVisible = $event"/>
-    </val-popup>
+    <div class="wrap">
+      <h1>Список:</h1>
+      <items-list :info="info" @item-selected="handleItemSelected"/>
+      <val-popup  v-model:show="dialogVisible">
+        <item-form :selectedItem="selectedItem" @update:show-dialog="dialogVisible = $event"/>
+      </val-popup>
+    </div>
+
 
   </div>
 </template>
@@ -144,6 +147,10 @@ export default {
 }
 .app{
   padding: 50px;
+}
+.wrap{
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 </style>
